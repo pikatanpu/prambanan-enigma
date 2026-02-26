@@ -57,10 +57,10 @@ scene.fog = fog
  */
 const textureLoader = new THREE.TextureLoader()
 
-const grassColorTexture = textureLoader.load('/textures/grass/color.jpg')
-const grassAmbientOcclusionTexture = textureLoader.load('/textures/grass/ambientOcclusion.jpg')
-const grassNormalTexture = textureLoader.load('/textures/grass/normal.jpg')
-const grassRoughnessTexture = textureLoader.load('/textures/grass/roughness.jpg')
+const grassColorTexture = textureLoader.load('textures/grass/color.jpg')
+const grassAmbientOcclusionTexture = textureLoader.load('textures/grass/ambientOcclusion.jpg')
+const grassNormalTexture = textureLoader.load('textures/grass/normal.jpg')
+const grassRoughnessTexture = textureLoader.load('textures/grass/roughness.jpg')
 
 grassColorTexture.repeat.set(8, 8)
 grassAmbientOcclusionTexture.repeat.set(8, 8)
@@ -82,7 +82,7 @@ grassRoughnessTexture.wrapT = THREE.RepeatWrapping
  */
 const stlLoader = new STLLoader()
 stlLoader.load(
-    '/models/Prambanan/prambanan.stl',
+    'models/Prambanan/prambanan.stl',
     (geometry) => {
         const material = new THREE.MeshStandardMaterial({ color: '#ffffff' })
         material.shadowSide = true
@@ -254,7 +254,7 @@ const userGesturePromise = () => {
 };
 
 userGesturePromise().then(() => {
-    audioLoader.load('/audio/gamelan.mp3', function(buffer) {
+    audioLoader.load('audio/gamelan.mp3', function(buffer) {
         backgroundSound.setBuffer(buffer);
         backgroundSound.setLoop(true);
         backgroundSound.setVolume(0.4);
