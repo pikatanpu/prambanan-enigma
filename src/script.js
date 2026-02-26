@@ -247,6 +247,7 @@ const backgroundSound = new THREE.Audio(listener);
 const userGesturePromise = () => {
     return new Promise((resolve) => {
         document.addEventListener('click', () => {
+            alert('UNDER CONSTRUCTION');
             resolve();
         }, { once: true });
     });
